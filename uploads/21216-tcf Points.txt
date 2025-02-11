@@ -1,0 +1,29 @@
+1) Fleet management SYSTEM (Login Heading)
+2) iNCREASE THE SIZE OF LOGIN inputs
+3) remove forgot password.
+4) Run Uat 
+5) Capacity utilixation graph values.
+6) Fuel Car Graph (Pimp Card)
+7) Decrease Fuel Graph . (And Show data in Graph)
+9) Discuss Graph with Team .
+10) Use hide Data table.
+11) Stolen Option in Menu .
+12) Incidental report in update Vehicle tabs. (Phase 2)
+13) Add Vehicle Form Create .
+14) Selected Option Show By default.
+15) Shoe fleet data in update Form .
+16) lock Functionality in Basic Info in update Form .
+17) remove Credit box in Fueling .
+18) Save Chnge Only be able for Admin
+19) Driver show W.R.t to Driver (Update Vehicle Driver)(alocation date show From To in Table)(system date)
+20) add column of driver status (active , inactive , blacklist(phase 2)).
+21) manage faculty move to update vehicle tabs.(deassigned Option enable)
+22) foreign kay in all database table.
+23) last trio route in live page
+24) basic info of car in info window
+25) Responsible user
+
+
+
+
+

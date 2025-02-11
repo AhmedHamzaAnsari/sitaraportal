@@ -1,0 +1,15 @@
+SITARA SERVICES.
+
+http://localhost:8080/sitara/services/sapstart.php
+http://localhost:8080/sitara/api/geo_check/checkin.php
+http://localhost:8080/sitara/api/geo_check/checkout.php
+http://localhost:8080/sitara/api/geo_check/trip_close.php
+http://151.106.17.246:8080/sitara_schedule_email/service.php
+http://localhost:8080/sitara/services/directnew.php
+http://151.106.17.246:8080/sitara/services/controllistner.php
+http://151.106.17.246:8080/sitara/services/excess_driving.php
+http://151.106.17.246:8080/sitara/services/system_alert.php?accesskey=12345
+http://151.106.17.246:8080/sitara_schedule_email/vehicle_activity_db.php
+http://151.106.17.246:8080/sitara_schedule_email/testing_cart_vehicle_email.php
+http://151.106.17.246:8080/sitara_schedule_email/admin_email_all_cart_report.php
+http://151.106.17.246:8080/sitara/services/check_without_tracker_vehicles.php

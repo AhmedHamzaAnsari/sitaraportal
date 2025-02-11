@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111608599474",
+    "project_id": "donation-test-bee62",
+    "storage_bucket": "donation-test-bee62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111608599474:android:eaec7743eebd450e028aab",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111608599474-ejb7bqst2ug03thb4ohef51486steo61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdvIs8Cjc2WGtnN5JB7EFYUGPfyEfmHEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111608599474-ejb7bqst2ug03thb4ohef51486steo61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

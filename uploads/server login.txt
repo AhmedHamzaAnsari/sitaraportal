@@ -1,0 +1,13 @@
+Below are the details to access the FMSUAT Server.
+
+First you need to connect through VPN using below details:
+
+                Link: https://125.209.101.250:5159           (Preferred to use IE)
+                ID: user11
+                Paxx: U#Hj7AW3mn{$qqp'
+
+Then take the remote of the server using the below details:
+
+                IP Address / Server Name:          172.23.12.27 / fmsuat.thecitizensfoundation.org
+                                                                ID:          TCF\p2pt.user
+                                                                Paxx:     Gh$12%K3#2+

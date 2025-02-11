@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:icalendar-ruby
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Asia/Karachi
+BEGIN:STANDARD
+DTSTART:20091031T230000
+TZOFFSETFROM:+0600
+TZOFFSETTO:+0500
+TZNAME:PKT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20210802T095328Z
+UID:5e344009-e0a4-4eea-8486-55cd7adef608
+DTSTART;TZID=Asia/Karachi:20210811T132000
+DTEND;TZID=Asia/Karachi:20210811T133000
+CLASS:PRIVATE
+DESCRIPTION:Abdul Samad and Tatjana Cikara should join this meeting link: h
+ ttps://topt.al/DRcK7a.\n\nAttendee:\nTatjana Cikara (tatjana.cikara@toptal
+ .com)\n\nSubject:\nToptal Initial Interview with Tatjana\n\nWeb Conference
+  URL:\nhttps://topt.al/DRcK7a\n\nSomething came up and you can't attend? P
+ lease reschedule or cancel the meeting:\nhttps://www.toptal.com/platform/t
+ alent/application_info/edit\n\nCreated by Top Scheduler\n
+SUMMARY:Call with Tatjana Cikara from Toptal
+END:VEVENT
+END:VCALENDAR

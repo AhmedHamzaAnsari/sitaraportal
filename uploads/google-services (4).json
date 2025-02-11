@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "534626367686",
+    "firebase_url": "https://pistapay-3b568.firebaseio.com",
+    "project_id": "pistapay-3b568",
+    "storage_bucket": "pistapay-3b568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534626367686:android:4984c3fbd3c8471ce0bfc7",
+        "android_client_info": {
+          "package_name": "com.rmps.pistapay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534626367686-prb3isnqgglbsh5103k676udt7fm3cq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rmps.pistapay",
+            "certificate_hash": "fcc260099e0aa35cd710a597b5ab0ec4d185e0c6"
+          }
+        },
+        {
+          "client_id": "534626367686-sc3v951emgebh88797gofj76v2ft99jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggG_2nfrOxu-rnuAZRfO9nvNN9rfClNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534626367686-343ltuagd1k0i02769rhau1v12e72kos.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "534626367686-3rq3f9rckcjj7u2bt01vbi1o3n9uncmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rmps.pistapaydelivery"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534626367686:android:579e74c1b367234de0bfc7",
+        "android_client_info": {
+          "package_name": "com.rmps.pistapaydelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534626367686-p8ig7el9b19g8et49cgoidmih6q0m49p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rmps.pistapaydelivery",
+            "certificate_hash": "fcc260099e0aa35cd710a597b5ab0ec4d185e0c6"
+          }
+        },
+        {
+          "client_id": "534626367686-sc3v951emgebh88797gofj76v2ft99jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggG_2nfrOxu-rnuAZRfO9nvNN9rfClNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534626367686-343ltuagd1k0i02769rhau1v12e72kos.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "534626367686-3rq3f9rckcjj7u2bt01vbi1o3n9uncmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rmps.pistapaydelivery"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534626367686:android:5cf08f7334ffab30e0bfc7",
+        "android_client_info": {
+          "package_name": "com.rmps.pistapaymerchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534626367686-0bi5cvo557ml294q65pcnt5nkes7v4vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rmps.pistapaymerchant",
+            "certificate_hash": "fcc260099e0aa35cd710a597b5ab0ec4d185e0c6"
+          }
+        },
+        {
+          "client_id": "534626367686-sc3v951emgebh88797gofj76v2ft99jm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggG_2nfrOxu-rnuAZRfO9nvNN9rfClNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534626367686-343ltuagd1k0i02769rhau1v12e72kos.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "534626367686-3rq3f9rckcjj7u2bt01vbi1o3n9uncmt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rmps.pistapaydelivery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
