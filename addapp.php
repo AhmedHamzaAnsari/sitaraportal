@@ -433,21 +433,7 @@ if(isset($_POST['submit'])){
                                                             placeholder="Enter Contact No" required>
                                                     </div>
 
-                                                    <!-- <div class="form-group col-md-6">
-                                                        <label for="inputAddress">Privilege</label>
-
-                                                        <select id="privilege" name="privilege"
-                                                            class="form-control selectpicker">
-                                                            <option selected>Choose...</option>
-                                                            <?php foreach($result1 as $key => $value){ ?>
-                                                            <option value="<?= $value['name'];?>"><?= $value['name']; ?>
-                                                            </option>
-                                                            <?php } 
-                                                            ?>
-
-
-                                                        </select>
-                                                    </div>-->
+                                                   
                                                     <div class="form-group col-md-6">
                                                         <label for="inputAddress">Role</label>
 

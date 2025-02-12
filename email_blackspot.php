@@ -782,7 +782,7 @@ $resultdevice = mysqli_query($db, $asset);
             // r_email.push('ahmedhamzaansari.99@gmail.com')
 
             $.ajax({
-                url: 'http://151.106.17.246:8080/sitara_schedule_email/current_location_report.php',
+                url: 'sitara_schedule_email/current_location_report.php',
                 type: 'POST',
                 data: {
                     email_arr: email_arr

@@ -20,10 +20,10 @@ if ($array_twsitara) {
 } else {
     echo "Not Working ";
     $curl = curl_init();
-
+    $base_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
     curl_setopt_array($curl, [
         CURLOPT_PORT => "8080",
-        CURLOPT_URL => "http://151.106.17.246:8080/sitara_schedule_email/api_status.php",
+        CURLOPT_URL => $base_url . "/sitara_schedule_email/api_status.php",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_MAXREDIRS => 10,
@@ -417,26 +417,28 @@ $tel_replace1_by = str_replace('<?xml version="1.0" encoding="utf-8"?>', '', $te
 $tel_replace2_by = str_replace('</string>', '', $tel_replace1_by);
 $content_tel_by = json_decode($tel_replace2_by, true);
 foreach ($content_tel_by as $obj_by) {
-    $tel_vehicle_clean = "tel" . clean($obj_by['vehicleName']);
-    $tel_time = $obj_by['gpsTime'];
-    $tel_lat = $obj_by['lat'];
-    $tel_long = $obj_by['lng'];
-    $tel_address = $obj_by['location'];
-    $tel_angle = $obj_by['Direction'];
-    $tel_speed = $obj_by['speed'];
-    $tel_vehicle = $obj_by['vehicleName'];
-    $tel_odo = $obj_by['mileage'];
-    $ttigne = $obj_by['Status_Ignition'];
-    if ($ttigne == 'ON') {
-        $tel_igne = 'On';
-    } else {
-        $tel_igne = 'Off';
-    }
+$tel_vehicle_clean = "tel" . clean($obj_by['vehicleName']);
+$tel_time = $obj_by['gpsTime'];
+$tel_lat = $obj_by['lat'];
+$tel_long = $obj_by['lng'];
+$tel_address = $obj_by['location'];
+$tel_angle = $obj_by['Direction'];
+$tel_speed = $obj_by['speed'];
+$tel_vehicle = $obj_by['vehicleName'];
+$tel_odo = $obj_by['mileage'];
+$ttigne = $obj_by['Status_Ignition'];
+if ($ttigne == 'ON') {
+$tel_igne = 'On';
+} else {
+$tel_igne = 'Off';
+}
 
-    $sqltel = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
- VALUES ('tellogix','$tel_vehicle_clean','$tel_time','$tel_lat','$tel_long','$tel_angle','$tel_speed','$tel_vehicle','','$tel_odo','$tel_igne','tellogix','$tel_time','$tel_time','$tel_address','0');";
+$sqltel = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('tellogix','$tel_vehicle_clean','$tel_time','$tel_lat','$tel_long','$tel_angle','$tel_speed','$tel_vehicle','','$tel_odo','$tel_igne','tellogix','$tel_time','$tel_time','$tel_address','0');";
 
-    mysqli_query($db, $sqltel);
+mysqli_query($db, $sqltel);
 
 }
 
@@ -450,73 +452,78 @@ $array_xtr = json_decode($data_xtr, true);
 
 foreach ($array_xtr['data'] as $row_xtr) {
 
-    $datetxtr = $row_xtr["ReceiveDateTime"];
-    $time_server_xtr = str_replace("T", " ", $datetxtr);
-    $imeixtr = "xtr" . clean($row_xtr["VRN"]);
-    $namextr = $row_xtr["VRN"];
-    $latxtr = $row_xtr["LATITUDE"];
-    $lngxtr = $row_xtr["LONGITUDE"];
-    $anglextr = $row_xtr["ANGLE"];
-    $speedxtr = $row_xtr["SPEED"];
-    $int_speed = (int) $speedxtr;
+$datetxtr = $row_xtr["ReceiveDateTime"];
+$time_server_xtr = str_replace("T", " ", $datetxtr);
+$imeixtr = "xtr" . clean($row_xtr["VRN"]);
+$namextr = $row_xtr["VRN"];
+$latxtr = $row_xtr["LATITUDE"];
+$lngxtr = $row_xtr["LONGITUDE"];
+$anglextr = $row_xtr["ANGLE"];
+$speedxtr = $row_xtr["SPEED"];
+$int_speed = (int) $speedxtr;
 
-    $licensepnxtr = '112113114115';
-    $odometerxtr = $row_xtr['Mileage'];
-    $ignetionxtr = $row_xtr["IgnitionStatus"];
-    if ($ignetionxtr == 'true') {
-        $ignxtr = 'On';
-    } else {
-        $ignxtr = 'Off';
-    }
-    $protocolxtr = "xtream";
-    $last_idlextr = $time_server_xtr;
-    $last_movextr = $time_server_xtr;
-    $last_stopxtr = $row_xtr['ReferenceLocation'];
+$licensepnxtr = '112113114115';
+$odometerxtr = $row_xtr['Mileage'];
+$ignetionxtr = $row_xtr["IgnitionStatus"];
+if ($ignetionxtr == 'true') {
+$ignxtr = 'On';
+} else {
+$ignxtr = 'Off';
+}
+$protocolxtr = "xtream";
+$last_idlextr = $time_server_xtr;
+$last_movextr = $time_server_xtr;
+$last_stopxtr = $row_xtr['ReferenceLocation'];
 
-    $sqlxtr = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
-VALUES ('xtream','$imeixtr','$time_server_xtr','$latxtr','$lngxtr','$anglextr','$int_speed','$namextr','$licensepnxtr','$odometerxtr','$ignxtr','$protocolxtr','$last_idlextr','$last_movextr','$last_stopxtr','0');";
+$sqlxtr = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('xtream','$imeixtr','$time_server_xtr','$latxtr','$lngxtr','$anglextr','$int_speed','$namextr','$licensepnxtr','$odometerxtr','$ignxtr','$protocolxtr','$last_idlextr','$last_movextr','$last_stopxtr','0');";
 
 
-    mysqli_query($db, $sqlxtr);
+mysqli_query($db, $sqlxtr);
 
 
 }
 //xtream end
 //teltonika start
 
-$fileman_teltonika = "http://3star.sjsolutionz.com/api/api.php?api=user&ver=1.0&key=2681E9BD666155E393C3573B0F5FB37B&cmd=OBJECT_GET_LOCATIONS_ALL,*";
+$fileman_teltonika =
+"http://3star.sjsolutionz.com/api/api.php?api=user&ver=1.0&key=2681E9BD666155E393C3573B0F5FB37B&cmd=OBJECT_GET_LOCATIONS_ALL,*";
 $data_teltonika = file_get_contents($fileman_teltonika);
 $array_teltonika = json_decode($data_teltonika, true);
 
 foreach ($array_teltonika as $row_teltonika) {
 
-    $time_server_tel = $row_teltonika["GpsDateTime"];
+$time_server_tel = $row_teltonika["GpsDateTime"];
 
-    $imeitel = "telto" . clean($row_teltonika["name"]);
-    $nametel = $row_teltonika["name"];
-    $lattel = $row_teltonika["lat"];
-    $lngtel = $row_teltonika["lng"];
-    $angletel = $row_teltonika["angle"];
-    $speedtel = $row_teltonika["speed"];
+$imeitel = "telto" . clean($row_teltonika["name"]);
+$nametel = $row_teltonika["name"];
+$lattel = $row_teltonika["lat"];
+$lngtel = $row_teltonika["lng"];
+$angletel = $row_teltonika["angle"];
+$speedtel = $row_teltonika["speed"];
 
-    $licensepntel = '112113114115';
-    $odometertel = '3333';
-    $ignetiontel = $row_teltonika["speed"];
-    if ($ignetiontel > '0') {
-        $igntel = 'On';
-    } else {
-        $igntel = 'Off';
-    }
-    $protocoltel = "teltonika";
-    $last_idletel = $time_server_tel;
-    $last_movetel = $time_server_tel;
-    $last_stoptel = $row_teltonika['Location'];
+$licensepntel = '112113114115';
+$odometertel = '3333';
+$ignetiontel = $row_teltonika["speed"];
+if ($ignetiontel > '0') {
+$igntel = 'On';
+} else {
+$igntel = 'Off';
+}
+$protocoltel = "teltonika";
+$last_idletel = $time_server_tel;
+$last_movetel = $time_server_tel;
+$last_stoptel = $row_teltonika['Location'];
 
-    $sqltelto = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
-VALUES ('teltonika','$imeitel','$time_server_tel','$lattel','$lngtel','$angletel','$speedtel','$nametel','$licensepntel','$odometertel','$igntel','$protocoltel','$last_idletel','$last_movetel','$last_stoptel','0');";
+$sqltelto = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('teltonika','$imeitel','$time_server_tel','$lattel','$lngtel','$angletel','$speedtel','$nametel','$licensepntel','$odometertel','$igntel','$protocoltel','$last_idletel','$last_movetel','$last_stoptel','0');";
 
 
-    mysqli_query($db, $sqltelto);
+mysqli_query($db, $sqltelto);
 
 
 }
@@ -530,26 +537,28 @@ $i = 0;
 
 foreach ($arrayiot["root"]["VehicleData"] as $rowiot) {
 
-    $vehicle_iot = $rowiot["Vehicle_Name"];
-    $LandMark_iot = $rowiot["Location"];
-    $imei = "iot" . clean($rowiot["Vehicle_Name"]);
-    $iot_db = $rowiot["GPSActualTime"];
-    $old_date_iot = date($iot_db);
-    $old_date_timestamp_iot = strtotime($old_date_iot);
-    $time_server_iot = date('Y-m-d H:i:s', $old_date_timestamp_iot);
-    $LAT_iot = $rowiot["Latitude"];
-    $LON_iot = $rowiot["Longitude"];
-    $Speed_iot = $rowiot["Speed"];
-    if ($Speed_iot > '0') {
-        $ign_iot = 'On';
-    } else {
-        $ign_iot = 'Off';
-    }
+$vehicle_iot = $rowiot["Vehicle_Name"];
+$LandMark_iot = $rowiot["Location"];
+$imei = "iot" . clean($rowiot["Vehicle_Name"]);
+$iot_db = $rowiot["GPSActualTime"];
+$old_date_iot = date($iot_db);
+$old_date_timestamp_iot = strtotime($old_date_iot);
+$time_server_iot = date('Y-m-d H:i:s', $old_date_timestamp_iot);
+$LAT_iot = $rowiot["Latitude"];
+$LON_iot = $rowiot["Longitude"];
+$Speed_iot = $rowiot["Speed"];
+if ($Speed_iot > '0') {
+$ign_iot = 'On';
+} else {
+$ign_iot = 'Off';
+}
 
 
-    $sql_iot = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
- VALUES ('iot','$imei','$time_server_iot','$LAT_iot','$LON_iot','360','$Speed_iot','$vehicle_iot','','3321','$ign_iot','iot','$time_server_iot','$time_server_iot','$LandMark_iot','0');";
-    mysqli_query($db, $sql_iot);
+$sql_iot = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('iot','$imei','$time_server_iot','$LAT_iot','$LON_iot','360','$Speed_iot','$vehicle_iot','','3321','$ign_iot','iot','$time_server_iot','$time_server_iot','$LandMark_iot','0');";
+mysqli_query($db, $sql_iot);
 }
 
 
@@ -563,19 +572,21 @@ $i = 0;
 
 foreach ($arrayteletix as $rowteletix) {
 
-    $vehicle_teletix = $rowteletix["VehicleName"];
-    $LandMark_teletix = $rowteletix["Location"];
-    $imei = "teletix" . clean($rowteletix["VehicleName"]);
-    $time_server_xtr_tele = $rowteletix["DateTime"];
-    $time_server_teletix = str_replace("T", " ", $time_server_xtr_tele);
-    $LAT_teletix = $rowteletix["Latitude"];
-    $LON_teletix = $rowteletix["Longitude"];
-    $Speed_teletix = $rowteletix["Speed"];
-    $ign_teletix = $rowteletix["ACC"];
+$vehicle_teletix = $rowteletix["VehicleName"];
+$LandMark_teletix = $rowteletix["Location"];
+$imei = "teletix" . clean($rowteletix["VehicleName"]);
+$time_server_xtr_tele = $rowteletix["DateTime"];
+$time_server_teletix = str_replace("T", " ", $time_server_xtr_tele);
+$LAT_teletix = $rowteletix["Latitude"];
+$LON_teletix = $rowteletix["Longitude"];
+$Speed_teletix = $rowteletix["Speed"];
+$ign_teletix = $rowteletix["ACC"];
 
-    $sql_teletix = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
- VALUES ('teletix','$imei','$time_server_teletix','$LAT_teletix','$LON_teletix','360','$Speed_teletix','$vehicle_teletix','','3321','$ign_teletix','teletix','$time_server_teletix','$time_server_teletix','$LandMark_teletix','0');";
-    mysqli_query($db, $sql_teletix);
+$sql_teletix = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('teletix','$imei','$time_server_teletix','$LAT_teletix','$LON_teletix','360','$Speed_teletix','$vehicle_teletix','','3321','$ign_teletix','teletix','$time_server_teletix','$time_server_teletix','$LandMark_teletix','0');";
+mysqli_query($db, $sql_teletix);
 }
 
 
@@ -583,30 +594,35 @@ foreach ($arrayteletix as $rowteletix) {
 
 //tw_x_start
 
-$tw_x = "http://portalxs.com/twpxcc/TrackingServices.asmx/TWPXCC_GetVData?secret_key=a3605b70-039b-45b1-95c9-47b4fe42002f";
+$tw_x =
+"http://portalxs.com/twpxcc/TrackingServices.asmx/TWPXCC_GetVData?secret_key=a3605b70-039b-45b1-95c9-47b4fe42002f";
 $tw_x_file = file_get_contents($tw_x);
 $tw_replace_by = str_replace('<string xmlns="http://tempuri.org/">', '', $tw_x_file);
-$tw_replace1_by = str_replace('<?xml version="1.0" encoding="utf-8"?>', '', $tw_replace_by);
-$tw_replace2_by = str_replace('</string>', '', $tw_replace1_by);
+    $tw_replace1_by = str_replace('
+    <?xml version="1.0" encoding="utf-8"?>', '', $tw_replace_by);
+    $tw_replace2_by = str_replace('
+</string>', '', $tw_replace1_by);
 $content_tw_by = json_decode($tw_replace2_by, true);
 foreach ($content_tw_by['_vehicleData'] as $tw_by) {
-    $tw_x_imei = "tw_x_" . clean($tw_by['RegNo']);
-    $tw_x_vehicle = $tw_by['RegNo'];
-    $tw_x_rdt = $tw_by['RDT'];
-    $tw_x_time = str_replace("T", " ", $tw_x_rdt);
-    $tw_x_lat = $tw_by['LAT'];
-    $tw_x_lng = $tw_by['LON'];
-    $tw_x_speed = $tw_by['Speed'];
-    $tw_x_location = $tw_by['Location'];
-    if ($tw_x_speed > 0) {
-        $tw_x_ign = 'On';
-    } else {
-        $tw_x_ign = 'Off';
-    }
+$tw_x_imei = "tw_x_" . clean($tw_by['RegNo']);
+$tw_x_vehicle = $tw_by['RegNo'];
+$tw_x_rdt = $tw_by['RDT'];
+$tw_x_time = str_replace("T", " ", $tw_x_rdt);
+$tw_x_lat = $tw_by['LAT'];
+$tw_x_lng = $tw_by['LON'];
+$tw_x_speed = $tw_by['Speed'];
+$tw_x_location = $tw_by['Location'];
+if ($tw_x_speed > 0) {
+$tw_x_ign = 'On';
+} else {
+$tw_x_ign = 'Off';
+}
 
-    $sql_tw_x = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
- VALUES ('tw_x','$tw_x_imei','$tw_x_time','$tw_x_lat','$tw_x_lng','360','$tw_x_speed','$tw_x_vehicle','$tw_x_vehicle','3321','$tw_x_ign','tw_x','$tw_x_time','$tw_x_time','$tw_x_location','0');";
-    mysqli_query($db, $sql_tw_x);
+$sql_tw_x = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('tw_x','$tw_x_imei','$tw_x_time','$tw_x_lat','$tw_x_lng','360','$tw_x_speed','$tw_x_vehicle','$tw_x_vehicle','3321','$tw_x_ign','tw_x','$tw_x_time','$tw_x_time','$tw_x_location','0');";
+mysqli_query($db, $sql_tw_x);
 
 }
 
@@ -614,38 +630,41 @@ foreach ($content_tw_by['_vehicleData'] as $tw_by) {
 
 //qtracker start
 
-$fileman_qtrack = 'https://login.aitrack.pk/api/get_devices?user_api_hash=$2y$10$MWdI3fsiX4YhnhYDdomLzetApTdSmqRmBwvq/cY43WaQIv9o7HIP6';
+$fileman_qtrack =
+'https://login.aitrack.pk/api/get_devices?user_api_hash=$2y$10$MWdI3fsiX4YhnhYDdomLzetApTdSmqRmBwvq/cY43WaQIv9o7HIP6';
 $data_qtrack = file_get_contents($fileman_qtrack);
 $array_qtrack = json_decode($data_qtrack, true);
 
 foreach ($array_qtrack['0']['items'] as $qtrack) {
 
-    $nameqtrack = $qtrack["name"];
-    $timepm = $qtrack["time"];
-    $timevpm = date_create($timepm);
-    echo $timeqtrack = date_format($timevpm, "Y-m-d H:i:s");
-    echo "<br>";
-    $idqtrack = $qtrack["name"];
-    $imeiqtrack = "qtrack" . clean($qtrack["name"]);
-    $vehicleqtrack = $qtrack["name"];
-    $LATqtrack = $qtrack["lat"];
-    $LONqtrack = $qtrack["lng"];
-    $LandMarkqtrack = $qtrack["addr"];
-    $Speedqtrack = $qtrack["speed"];
-    if ($Speedqtrack > '0') {
-        $ignqtrack = 'On';
-    } else {
-        $ignqtrack = 'Off';
-    }
+$nameqtrack = $qtrack["name"];
+$timepm = $qtrack["time"];
+$timevpm = date_create($timepm);
+echo $timeqtrack = date_format($timevpm, "Y-m-d H:i:s");
+echo "<br>";
+$idqtrack = $qtrack["name"];
+$imeiqtrack = "qtrack" . clean($qtrack["name"]);
+$vehicleqtrack = $qtrack["name"];
+$LATqtrack = $qtrack["lat"];
+$LONqtrack = $qtrack["lng"];
+$LandMarkqtrack = $qtrack["addr"];
+$Speedqtrack = $qtrack["speed"];
+if ($Speedqtrack > '0') {
+$ignqtrack = 'On';
+} else {
+$ignqtrack = 'Off';
+}
 
 
 
 
 
 
-    $sql_qtrack = "INSERT INTO bulkdatanew (id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
- VALUES ('q_tracker','$imeiqtrack','$timeqtrack','$LATqtrack','$LONqtrack','360','$Speedqtrack','$vehicleqtrack','$idqtrack','3321','$ignqtrack','q_tracker','$timeqtrack','$timeqtrack','$LandMarkqtrack','0');";
-    mysqli_query($db, $sql_qtrack);
+$sql_qtrack = "INSERT INTO bulkdatanew
+(id,imei,st_server,lat,lng,angle,speed,name,sim_number,odometer,list,protocol,last_idle,last_move,last_stop,status)
+VALUES
+('q_tracker','$imeiqtrack','$timeqtrack','$LATqtrack','$LONqtrack','360','$Speedqtrack','$vehicleqtrack','$idqtrack','3321','$ignqtrack','q_tracker','$timeqtrack','$timeqtrack','$LandMarkqtrack','0');";
+mysqli_query($db, $sql_qtrack);
 
 
 }
@@ -793,10 +812,10 @@ mysqli_close($db);
     <!-- <meta http-equiv="refresh" content="200"> -->
     <title>Sitara Data</title>
     <style>
-        .progress {
-            height: 3px !important;
-            margin-bottom: 1px !important;
-        }
+    .progress {
+        height: 3px !important;
+        margin-bottom: 1px !important;
+    }
     </style>
 </head>
 

@@ -44,10 +44,10 @@ if (!empty($_POST)) {
 function send_mail($email){
 
 $curl = curl_init();
-
+$base_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
 curl_setopt_array($curl, [
   CURLOPT_PORT => "8080",
-  CURLOPT_URL => "http://151.106.17.246:8080/sitara_schedule_email/close_alert_feedback.php?email=".$email."",
+  CURLOPT_URL => $base_url . "/sitara_schedule_email/close_alert_feedback.php?email=".$email."",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,

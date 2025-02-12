@@ -21,8 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //  session_register("myusername");
         // verify_email($row['id']);
         $id= $row['id'];
-
-        if(verify_email($row['id'])!=0){
+        $is_login = verify_email($row['id']);
+        // echo $is_login;
+        if($is_login!=0){
             echo '<script>
             alert("Verification code have been send successfully. Please Check your email !");
             window.location.href="verify_email.php?id=' . $id . '";
@@ -42,12 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 function verify_email($id)
 {
-
-
+    $base_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+    $url = $base_url . '/sitara_schedule_email/login_verification.php?id=' . urlencode($id);
+    // echo $url;
     $curl = curl_init();
-
+    
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://151.106.17.246:8080/sitara_schedule_email/login_verification.php?id='.$id.'',
+        CURLOPT_URL => $url,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -55,16 +57,20 @@ function verify_email($id)
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'GET',
-    )
-    );
+        CURLOPT_SSL_VERIFYPEER => false, // Enable SSL verification
+    ));
 
     $response = curl_exec($curl);
 
-    curl_close($curl);
-    // echo $response;
-    return $response;
+    if ($response === false) {
+        return 'cURL Error: ' . curl_error($curl);
+    }
 
+    curl_close($curl);
+    return $response;
 }
+
+
 ?>
 
 

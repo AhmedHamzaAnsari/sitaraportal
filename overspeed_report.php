@@ -641,7 +641,7 @@ $resultdevice = mysqli_query($db, $asset);
         // r_email.push('ahmedhamzaansari.99@gmail.com')
 
         $.ajax({
-                url: 'http://151.106.17.246:8080/sitara_schedule_email/sitara_email.php',
+                url: 'sitara_schedule_email/sitara_email.php',
                 type: 'POST',
                 data: {
                     check: v_id,
