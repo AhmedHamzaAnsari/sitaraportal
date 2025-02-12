@@ -1,19 +1,14 @@
 <?php
 
 error_reporting(0);
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'Ptoptrack@(!!@');
-define('DB_DATABASE', 'sitara');
-$db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-
+include("../config_indemnifier.php");
 
 //index.php
 ini_set('memory_limit', '-1');
 set_time_limit(500);
 
-include ('class/class.phpmailer.php');
-include ('pdf.php');
+include('class/class.phpmailer.php');
+include('pdf.php');
 
 $user_id = $_GET['id'];
 
@@ -91,7 +86,7 @@ function smtp_mailer($to, $time, $user_id, $db)
         // echo $message = '<label class="text-success">Verification code have been send successfully on your email...</label>';
         echo 1;
 
-         $verify = "UPDATE `users`
+        $verify = "UPDATE `users`
         SET
         `allowed_actions` = '$verificationCode',
         `independent_exist` = '$time'
