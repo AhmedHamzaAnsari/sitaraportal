@@ -78,7 +78,7 @@ if ($sqltplnew == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta>
-	<title>Sitara TPL Data</title>
+	<title>Go Get Going With Go  TPL Data</title>
 	<style>
 		.progress {
 			height: 3px !important;

@@ -1,4 +1,4 @@
 <?php
 
-echo "Go To Hell :)";
+echo "Go Get Going With Go  To Hell :)";
 ?>

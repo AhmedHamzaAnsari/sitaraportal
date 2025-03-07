@@ -73,7 +73,7 @@ if ($sql_tw_x == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="120">
-	<title>Sitara TWX</title>
+	<title>Go Get Going With Go  TWX</title>
 	<style>
 		.progress {
 			height: 3px !important;

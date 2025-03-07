@@ -1,4 +1,4 @@
-SITARA SERVICES.
+Go Get Going With Go  SERVICES.
 
 http://localhost:8080/sitara/services/sapstart.php
 http://localhost:8080/sitara/api/geo_check/checkin.php

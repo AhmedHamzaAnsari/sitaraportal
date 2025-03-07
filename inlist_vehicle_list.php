@@ -406,7 +406,7 @@ include ("config_indemnifier.php");
                 }); // checked
 
             } else {
-                // alert("Go !");
+                // alert("Go Get Going With Go  !");
                 window.location = 'editAsset.php?id=' + id + ''; // unchecked
 
             }

@@ -74,7 +74,7 @@ if ($sql_twsitara == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="120">
-	<title>Sitara Tracking world Data</title>
+	<title>Go Get Going With Go  Tracking world Data</title>
 	<style>
 		.progress {
 			height: 3px !important;

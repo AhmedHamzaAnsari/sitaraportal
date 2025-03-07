@@ -37,7 +37,7 @@ function fetch_customer_data($connect)
                                 <div class="col-md-12">
                                 <a href="index.php">
                                 <!-- <img src="images/crm logo 1.png" alt="" srcset=""  style="display: block;margin-left: auto;margin-right: auto;width: 60%;"> -->
-                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">SITARA</h2>
+                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">Go Get Going With Go </h2>
                                 </a>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ function fetch_customer_data($connect)
                                 <div class="col-md-12">
                                 <a href="index.php">
                                 <!-- <img src="images/crm logo 1.png" alt="" srcset=""  style="display: block;margin-left: auto;margin-right: auto;width: 60%;"> -->
-                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">SITARA</h2>
+                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">Go Get Going With Go </h2>
                                 </a>
                                 </div>
                             </div>

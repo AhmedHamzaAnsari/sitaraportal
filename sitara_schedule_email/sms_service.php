@@ -85,7 +85,7 @@ if ($count > 0)
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=SITARA-LIVE&To=' . $value . '&Message=' . urlencode($f_url) ,
+                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=Go Get Going With Go -LIVE&To=' . $value . '&Message=' . urlencode($f_url) ,
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,
@@ -147,7 +147,7 @@ if ($count > 0)
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=SITARA-LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
+                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=Go Get Going With Go -LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,
@@ -156,7 +156,7 @@ if ($count > 0)
                             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                             CURLOPT_CUSTOMREQUEST => 'GET',
                         ));
-                        // echo "https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=SITARA-LIVE&To=".$value."&Message='.urlencode($msg)";
+                        // echo "https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=Go Get Going With Go -LIVE&To=".$value."&Message='.urlencode($msg)";
                         $response = curl_exec($curl);
                         echo $response . '<br>';
 
@@ -258,7 +258,7 @@ if ($count > 0)
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=SITARA-LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
+                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=Go Get Going With Go -LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,
@@ -321,7 +321,7 @@ if ($count > 0)
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=SITARA-LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
+                            CURLOPT_URL => 'https://connect.jazzcmt.com/sendsms_url.html?Username=03028652867&Password=Jazz@123&From=Go Get Going With Go -LIVE&To=' . $value . '&Message=' . urlencode($msg) ,
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,

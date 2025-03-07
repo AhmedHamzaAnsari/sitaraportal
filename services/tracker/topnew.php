@@ -60,7 +60,7 @@ VALUES ('topflay','$imeitop','$datetimetop','$lattop','$lngtop','$angletop','$sp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="refresh" content="40">
-    <title>Sitara TopFly Data</title>
+    <title>Go Get Going With Go  TopFly Data</title>
     <style>
     .progress {
         height: 3px !important;

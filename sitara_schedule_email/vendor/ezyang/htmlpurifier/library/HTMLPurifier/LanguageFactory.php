@@ -112,7 +112,7 @@ class HTMLPurifier_LanguageFactory
             if (file_exists($file) || class_exists($class, false)) {
                 $lang = new $class($config, $context);
             } else {
-                // Go fallback
+                // Go Get Going With Go  fallback
                 $raw_fallback = $this->getFallbackFor($code);
                 $fallback = $raw_fallback ? $raw_fallback : 'en';
                 $depth++;

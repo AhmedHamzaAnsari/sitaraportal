@@ -120,7 +120,7 @@ function smtp_mailer($to,$time){
 	$html_code = '<div class="container">
     <div class="row">
         <div class="col-md-12">
-        <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">SITARA</h2>
+        <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">Go Get Going With Go </h2>
         
         </div>
             <h6>Report Name : Black Spot</h6>

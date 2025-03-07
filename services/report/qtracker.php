@@ -79,7 +79,7 @@ if ($sql_qtrack == true) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta>
-    <title>Sitara Universal Data</title>
+    <title>Go Get Going With Go  Universal Data</title>
     <style>
         .progress {
             height: 3px !important;

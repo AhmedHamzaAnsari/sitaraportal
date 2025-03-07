@@ -60,7 +60,7 @@ if ($sqlresq == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="30">
-	<title>Sitara Resq Data</title>
+	<title>Go Get Going With Go  Resq Data</title>
 	<style>
 		.progress {
 			height: 3px !important;

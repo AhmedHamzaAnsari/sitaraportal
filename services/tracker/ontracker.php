@@ -56,7 +56,7 @@ if ($sql_tontracker == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="30">
-	<title>Sitara OnTracker</title>
+	<title>Go Get Going With Go  OnTracker</title>
 	<style>
 		.progress {
 			height: 3px !important;

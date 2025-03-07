@@ -72,7 +72,7 @@ mysqli_close($db);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="300">
-	<title>Sitara Data</title>
+	<title>Go Get Going With Go  Data</title>
 	<style>
 		.progress {
 			height: 3px !important;

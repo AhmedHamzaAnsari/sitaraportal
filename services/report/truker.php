@@ -72,7 +72,7 @@ if ($sql_truckker == true) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta >
-	<title>Sitara Trukker Data</title>
+	<title>Go Get Going With Go  Trukker Data</title>
 	<style>
 		.progress {
 			height: 3px !important;

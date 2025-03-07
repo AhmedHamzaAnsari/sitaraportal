@@ -68,7 +68,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Sitara</title>
+    <title>Go Get Going With Go </title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&amp;display=swap" rel="stylesheet">
@@ -104,7 +104,7 @@
                                 <div class="col-md-12">
                                 <a href="index.php">
                                 <!-- <img src="images/crm logo 1.png" alt="" srcset=""  style="display: block;margin-left: auto;margin-right: auto;width: 60%;"> -->
-                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">SITARA</h2>
+                                <h2 style="font-weight: bold;    color: #3e3ea7;font-size: 72px;font-style: italic;font-weight: bold;text-decoration: underline">Go Get Going With Go </h2>
                                 </a>
                                 </div>
                             </div>

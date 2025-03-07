@@ -155,7 +155,7 @@ h5 {
 
         <div class="theme-brand-name">
             <!-- <a href="index.php"><img src="images/crm logo 1 inverse.png" alt="" srcset="" style="width:180px"></a> -->
-            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">SITARA</h1>
+            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">Go Get Going With Go </h1>
         </div>
 
         <div class="submenu" id="dashboard">
@@ -866,7 +866,7 @@ h5 {
 
         <div class="theme-brand-name">
             <!-- <a href="index.php"><img src="images/crm logo 1 inverse.png" alt="" srcset="" style="width:180px"></a> -->
-            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">SITARA</h1>
+            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">Go Get Going With Go </h1>
         </div>
 
         <div class="submenu" id="dashboard">
@@ -1665,7 +1665,7 @@ h5 {
 
         <div class="theme-brand-name">
             <!-- <a href="index.php"><img src="images/crm logo 1 inverse.png" alt="" srcset="" style="width:180px"></a> -->
-            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">SITARA</h1>
+            <h1 style="font-weight: bold;color: #fff;font-style: italic;font-weight: bold;text-align:center">Go Get Going With Go </h1>
         </div>
 
         <div class="submenu" id="dashboard">
